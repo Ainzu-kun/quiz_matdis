@@ -21,8 +21,12 @@ Route::get('/', function () {
 Route::controller(AuthController::class)->group(function() {
     // Register Routes
     Route::get('/register', 'register')->name('auth.register');
+    Route::post('/register/store', 'store')->name('auth.store');
 
     // Login Routes
     Route::get('/login', 'login')->name('auth.login');
     Route::post('/login/auth', 'authorization')->name('auth.authorization');
+
+    // Logout Routes
+    Route::get('/logout', 'logout')->name('auth.logout');
 });

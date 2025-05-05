@@ -19,6 +19,14 @@ class UserSeeder extends Seeder
                 'username' => 'admin',
                 'email' => 'admin@upi.edu',
                 'password' => bcrypt('admin'),
+                'role' => 'admin',
+            ],
+            [
+                'name' => 'user',
+                'username' => 'user',
+                'email' => 'user@upi.edu',
+                'password' => bcrypt('user'),
+                'role' => 'user',
             ],
         ];
 
